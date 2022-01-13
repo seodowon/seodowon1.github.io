@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>세림스틸</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <style>
+
+        html, body, div, span
+
+        , ul, ol, li 
+
+        {margin:0; padding:0; box-sizing:border-box;}
+
+        label {box-sizing:border-box;}
+
+        ul, ol {list-style-type:none;}
+
+        .clearfloat:after {content:""; display:block; clear:both;}  
+
+
+
+        /* input */
+
+        #input_slidebtn1, #input_slidebtn2, #input_slidebtn3, #input_slidebtn4 {display:none;}
+
+        #input_slidebtn1:checked~.imgslider_cont .cont_imgbox {margin-left:0;}
+
+        #input_slidebtn2:checked~.imgslider_cont .cont_imgbox {margin-left:-100%;}
+
+        #input_slidebtn3:checked~.imgslider_cont .cont_imgbox {margin-left:-200%;}
+
+
+        /* 이미지박스 */
+
+        #imgslider {overflow:hidden; position:relative;}
+
+        #imgslider .imgslider_cont .cont_imgbox {width:400%; height:100%; transition:all 0.9s;} 
+
+        .imgslider_cont .cont_imgbox li {float:left; width:25%; height:100%;}      
+
+        .imgslider_cont .cont_imgbox li a {display:block; width:100%; height:100%;}          
+
+        .imgslider_cont .cont_imgbox li:nth-child(1) {background-color:#333;}
+
+        .imgslider_cont .cont_imgbox li:nth-child(2) {background-color:#666;}
+
+        .imgslider_cont .cont_imgbox li:nth-child(3) {background-color:#999;}
+
+
+        /* left right 버튼박스 */
+
+        #imgslider .imgslider_cont {position:relative;}
+
+        .imgslider_cont .cont_label_left, .imgslider_cont .cont_label_right {position:absolute; width:50px; height:50px; top:50%; transform:translate(0, -50%);}
+
+        .cont_label_left_inner label, .cont_label_right_inner label {position:absolute;  top:0;left:0; z-index:1; cursor:pointer; background-color:}
+
+
+
+        .imgslider_cont .cont_label_left {left:0;}
+
+        .imgslider_cont .cont_label_left .cont_label_left_inner {position:relative; width:50px; height:50px; z-index:2;}
+
+        
+
+        .imgslider_cont .cont_label_right {right:0;}
+
+        .imgslider_cont .cont_label_right .cont_label_right_inner {position:relative; width:50px; height:50px; z-index:2;}
+
+
+
+        /* left right 버튼실행 */
+
+        #input_slidebtn1:checked~.imgslider_cont .cont_label_left_inner label:nth-child(4) {z-index:2;}
+
+        #input_slidebtn1:checked~.imgslider_cont .cont_label_right_inner label:nth-child(2) {z-index:2;}
+
+        #input_slidebtn2:checked~.imgslider_cont .cont_label_left_inner label:nth-child(1) {z-index:2;}
+
+        #input_slidebtn2:checked~.imgslider_cont .cont_label_right_inner label:nth-child(3) {z-index:2;}
+
+        #input_slidebtn3:checked~.imgslider_cont .cont_label_left_inner label:nth-child(2) {z-index:2;}
+
+        #input_slidebtn3:checked~.imgslider_cont .cont_label_right_inner label:nth-child(4) {z-index:2;}
+
+
+
+
+        /* 하단 레이블 */
+
+        #imgslider .imgslider_labels {position:absolute; bottom:20px;left:50%; transform:translate(-50%, 0);}
+
+        .imgslider_labels label {float:left; margin:0 5px 0 0; width:20px; height:20px; border:2px solid #f00; border-radius:50%; cursor:pointer;}
+
+        .imgslider_labels label:last-child {margin:0 0 0 0;}
+
+        #input_slidebtn1:checked~.imgslider_labels label:nth-child(1) {background-color:#f00;}
+
+        #input_slidebtn2:checked~.imgslider_labels label:nth-child(2) {background-color:#f00;}
+
+        #input_slidebtn3:checked~.imgslider_labels label:nth-child(3) {background-color:#f00;}
+
+
+    
+
+    </style>
+</head>
+<body>
+
+<!--	<div id="header">-->
+<!--		<div class="header_inner">-->
+<!--			home / email-->
+<!--		</div>-->
+<!--	</div>-->
+
+	<div id="nav">
+		<div class="nav_inner">
+			<ul class="navigation clearfix">
+				<li class="navigation_list"><a href="index.html" class="navigation_link"> <img src="images/serim.jpg" style="width: 75px;"></a></li>
+                <li class="navigation_list1"><h2 style="font-family: sans-serif">세아 베스틸, 세아 특수강 대리점</h2></li>
+                <li class="navigation_list2"><a href="%ED%9A%8C%EC%82%AC%EC%86%8C%EA%B0%9C.html" class="navigation_link"><strong>회사 소개</strong></a></li>
+                <li class="navigation_list2"><a href="오시는길.html" class="navigation_link"><strong>오시는길</strong></a></li>
+                <li class="navigation_list2"><a href="CHQWIRE.html" class="navigation_link"><strong>제품 정보</strong></a></li>
+
+            </ul>
+		</div>
+	</div>
+<br><br><br><br><br><br><br><br>
+	<div id="content" class="clearfix">
+		<div class="section_main"><br><br>
+<br><br><br><br>
+
+
+
+    <div id="imgslider">
+
+        <input type="radio" name="slidebtn" id="input_slidebtn1" checked />
+
+        <input type="radio" name="slidebtn" id="input_slidebtn2" />
+
+        <input type="radio" name="slidebtn" id="input_slidebtn3" />
+
+        <input type="radio" name="slidebtn" id="input_slidebtn4" />
+
+
+
+        <div class="imgslider_cont">
+
+            <ul class="cont_imgbox clearfloat">
+
+                <li><a href="#"><img src="images/chqwire.jpg" width="100%" height="100%"></a></li>
+
+                <li><a href="#"><img src="images/CDbarMachine.jpg" width="100%"></a></li>
+
+                <li><a href="#"><img src="images/PEELEDBAR1.jpg"></a></li>
+
+                <li><a href="#"></a></li>
+
+            </ul>
+
+            <div class="cont_label_left">
+
+                <div class="cont_label_left_inner">
+
+                    <label for="input_slidebtn1"></label>
+
+                    <label for="input_slidebtn2"></label>
+
+                    <label for="input_slidebtn3"></label>
+
+
+                </div>
+
+            </div>
+
+            <div class="cont_label_right">              
+
+                <div class="cont_label_right_inner">
+
+                    <label for="input_slidebtn1"></label>
+
+                    <label for="input_slidebtn2"></label>
+
+                    <label for="input_slidebtn3"></label>
+
+              </div>
+
+            </div>            
+
+        </div>
+
+        <div class="imgslider_labels clearfloat">
+
+            <label for="input_slidebtn1"></label>
+
+            <label for="input_slidebtn2"></label>
+
+            <label for="input_slidebtn3"></label>
+
+      </div>
+
+    </div>
+
+
+
+
+
+		</div> 
+		
+	</div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    
+    
+    
+	
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="footer_inner2">
+                 <img src="images/serim3.jpg" style="width: 135px; ">
+            </div>
+            <div class="footer_inner3">
+                경기도 시흥시 정왕동 2210 B동 1234호<br>
+                담당자 010-9394-0143
+                TEL. 031-499-4668
+                FAX. 031-8041-4660<br>
+                EMAIL. slsteelceo@naver.com
+            </div>
+		</div>
+	</div>	
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

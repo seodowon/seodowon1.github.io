@@ -1,0 +1,255 @@
+/* 초기화 */
+body,button,dd,dt,fieldset,form,h2,h4,h5,h6,input,legend,ol,p,select,table,td,textarea,th,ul{
+    margin:0;
+    padding:0;
+}
+body,button,input,select,table,textarea{
+    font-size: 12px;
+    font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+button,input{
+    border-radius: 0;
+}
+fieldset,img{
+    border: 0;
+}
+ol,ul{
+    list-style: none;
+}
+address,em{
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+/* layout */
+#header{
+	background: #eee;
+	height: 20px;
+	margin-bottom: 20px;
+}
+
+.header_inner{
+	width: 1200px;
+	margin: 0 auto;
+	background: #eee;
+}
+
+
+#footer{
+	height: 60px;
+	background: #eee;
+    
+}
+
+.footer_inner{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#content{
+	background: #fff;
+	width: 1050px;
+	margin: 20px auto 20px auto;
+    height: 2000px;
+    align-content: center;
+}
+
+.section_main{
+	width: 500px;
+	background: white;
+	float: left;
+}
+
+.aside{
+	width: 500px;
+	background: #5f85bb;
+	float: left;
+	height: 700px;
+}
+
+.section{
+	background: white;
+	height: 350px;
+}
+
+
+.article{
+	background: white;
+	height: 350px;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after{
+	clear: both; /* float 해제 */
+	display: block;
+	content: "";
+}
+
+.navigation_list{
+	float: left;
+	width: 150px;
+	line-height: 50px; /* 텍스트를 상하로 가운데 정렬하는 속성 */
+	text-align: center;
+}
+
+.navigation_link{
+	font-size: 16px;
+	color: #000080;
+}
+
+.navigation_list:hover .sub_menu{
+	display: block;
+}
+
+.navigation_list2{
+	float: right;
+	width: 142px;
+	line-height: 50px; /* 텍스트를 상하로 가운데 정렬하는 속성 */
+	text-align: center;
+}    
+
+
+#nav{
+	height: 50px;
+	border-bottom: 1px solid #efefef;
+	border-top: 1px solid #efefef;
+	z-index: 200; /* 뎁스 depth값을 설정, 각 영역간의 높이값을 변경하여 뒤로 숨는 현상을 방지 */
+	position: relative; /* depth값을 적용하고, 서브메뉴의 스테이지를 설정하기 위해서 넣은 속성  */
+}
+
+.nav_inner {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+    
+
+.sub_menu{
+	width: 100%;
+	height: 100px;
+	background: #ff0;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	display: none;
+}
+
+
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.header_inner {
+    
+}
+
+.footer_inner2 {
+    width: 150px;
+    height: 60px;
+    background: #eee;
+    float: left;
+    box-sizing:border-box;
+    margin-left: 0%;
+}
+
+.footer_inner3 {
+
+	width: 1050px;
+	background: #eee;
+	float: left;
+    margin-left: 0%;
+	height: 60px;
+    box-sizing: border-box;
+}
+
+
+
+.listt {
+    background: #eee;
+    width: 150px;
+    height: 2900px;
+    margin-left: 0%;
+    float: left;
+    box-sizing:border-box;
+
+}
+
+li {
+    
+    margin:0;
+    padding:0;
+}
+
+.mylist {
+    padding: 5px 0px 5px 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #efefef;
+    font-size: 12px;
+}
+
+
+
+
+.aside3 {
+        float: left;
+    box-sizing:border-box;
+    margin-left: 0%;
+    font-family:sans-serif;
+    background: fff;
+    width:1200px;
+
+}
+
+h2 {
+    
+}
+
+.mapp {
+    float: left;
+    box-sizing:border-box;
+    margin-left: 0%;
+    font-family:sans-serif;
+    height: 2500px;
+    width:1050px;
+
+}
+
+.aside2 {
+    
+}
+
+.aside3_inner {
+    
+}
+
+#tablee {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navigation_list6 {
+    float: center;
+	width: 1200px;
+	line-height: 50px; /* 텍스트를 상하로 가운데 정렬하는 속성 */
+}
+.navigation_list5 {
+ 
+    float: center;
+	width: 150px;
+	line-height: 0px; /* 텍스트를 상하로 가운데 정렬하는 속성 */
+}
+
+.navigation {
+    
+}
